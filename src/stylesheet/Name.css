@@ -1,0 +1,20 @@
+.containerName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+span {
+  font-size: 4em;
+  /* font-weight: bold; */
+  color: white;
+}
+
+.blue {
+  color: blue;
+}
+
+.green {
+  color: chartreuse;
+}
