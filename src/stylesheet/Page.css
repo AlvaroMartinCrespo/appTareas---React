@@ -1,3 +1,10 @@
+h1 {
+  color: #1b1b32;
+  font-size: 25px;
+  text-align: center;
+  margin: 20px;
+}
+
 .mainContainer {
   display: flex;
   align-items: center;
@@ -6,4 +13,13 @@
 
 .containerNamePage {
   margin: 60px 10px 60px 10px;
+}
+
+.task-list {
+  width: 600px;
+  min-height: 500px;
+  background-color: #d0d0d5;
+  padding: 25px;
+  margin: 25px;
+  border-radius: 26px;
 }

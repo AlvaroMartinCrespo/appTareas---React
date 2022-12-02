@@ -5,6 +5,7 @@ function Name() {
   const span1 = '<';
   const span2 = 'AMC';
   const span3 = ' />';
+
   return (
     <div className="containerName">
       <span className="span blue">{span1}</span>
