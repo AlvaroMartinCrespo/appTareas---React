@@ -23,7 +23,16 @@
 }
 
 .icon-taks {
+  display: flex;
+  align-content: center;
   width: 25px;
   height: 25px;
   margin: 5px;
+}
+
+/* Task completed */
+
+.task-container.complete {
+  background-color: #5a01a7;
+  text-decoration: line-through;
 }

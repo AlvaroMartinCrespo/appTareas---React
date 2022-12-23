@@ -1,11 +1,14 @@
 import React from 'react';
 import '../stylesheet/Tarea.css';
+import { AiOutlineClose } from 'react-icons/ai';
 
-function Tarea({ text }) {
+function Tarea({ text, complete }) {
   return (
-    <div className="task-container">
+    <div className={complete ? 'task-container complete' : 'task-container'}>
       <div className="text-task">{text}</div>
-      <div className="icon-task">Eliminar</div>
+      <div className="container-task-icons">
+        <AiOutlineClose className="icon-taks" />
+      </div>
     </div>
   );
 }
