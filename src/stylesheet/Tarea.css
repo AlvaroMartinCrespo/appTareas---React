@@ -30,6 +30,10 @@
   margin: 5px;
 }
 
+.task-container {
+  width: 100%;
+}
+
 /* Task completed */
 
 .task-container.complete {
