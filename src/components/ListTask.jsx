@@ -37,17 +37,14 @@ function ListTasks() {
    * @param {*} id
    */
   const completarTarea = (id) => {
-    const tareaComplete = state.find((element) => {
+    const tareasCompletadas = state.map((element) => {
       if (element.id === id) {
-        return (element.complete = true);
+        element.complete = !element.complete;
       }
+      return element;
     });
-    setState([
-      tareaComplete,
-      ...state.filter((element) => {
-        return element.id !== id;
-      }),
-    ]);
+
+    setState(tareasCompletadas);
   };
 
   return (
