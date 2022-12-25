@@ -18,6 +18,29 @@ function ListTasks() {
     }
   };
 
+  const eliminarTarea = (id) => {
+    console.log(id);
+    setState(
+      state.filter((element) => {
+        return element.id !== id;
+      })
+    );
+  };
+
+  const completarTarea = (id) => {
+    const tareaComplete = state.find((element) => {
+      if (element.id === id) {
+        return (element.complete = true);
+      }
+    });
+    setState([
+      tareaComplete,
+      ...state.filter((element) => {
+        return element.id !== id;
+      }),
+    ]);
+  };
+
   return (
     <>
       <Formulario onSubmit={agregarTarea} />
@@ -29,6 +52,8 @@ function ListTasks() {
               id={element.id}
               text={element.text}
               complete={element.complete}
+              completarTarea={completarTarea}
+              eliminarTarea={eliminarTarea}
             />
           );
         })}
