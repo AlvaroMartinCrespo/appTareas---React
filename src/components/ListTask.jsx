@@ -18,6 +18,10 @@ function ListTasks() {
     }
   };
 
+  /**
+   * Busca la tarea por id y la elimina si coincide.
+   * @param {*} id
+   */
   const eliminarTarea = (id) => {
     console.log(id);
     setState(
@@ -27,6 +31,11 @@ function ListTasks() {
     );
   };
 
+  /**
+   * Se recoge la tarea por su id y se convierte a completada,
+   * se introduce en la array.
+   * @param {*} id
+   */
   const completarTarea = (id) => {
     const tareaComplete = state.find((element) => {
       if (element.id === id) {
